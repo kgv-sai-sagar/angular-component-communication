@@ -1,0 +1,48 @@
+<h1>Flopbuster</h1>
+
+<div class="jumbotron d-flex m-1 mb-4">
+  <div class="p-2 col-6">
+    We have all the best flops in the business!
+    <br>
+    Choose a flop to rent
+  </div>
+
+
+  <div class="card p-2 col-6">
+    <!--Exercise:
+      Make this a component
+      send in the data for # of movies rented, and list of titles
+      BONUS: hook up the rent buttons below
+     -->
+    <!-- The inside of the [] is the property binding from app.component.ts check 10-17(lines)-->
+    <my-rental-list [rentalList]="rentalList" [myList]="myList"></my-rental-list>
+  </div>
+
+</div>
+
+
+
+<div style="display:flex; justify-content:space-around">
+
+  <div class="card bg-dark text-light" style="width:10rem;">
+    <div class="card-body">
+      <h6>{{wingCommander.title}}</h6>
+
+      <button
+      (click)="addRental(wingCommander)"
+      class="btn btn-primary" style="flex">Rent</button>
+    </div>
+  </div>
+
+
+  <div class="card bg-dark text-light" style="width:10rem;">
+    <div class="card-body">
+      <h6>{{theRoom.title}}</h6>
+
+      <button
+      (click)="addRental(theRoom)"
+      class="btn btn-primary" style="flex">Rent</button>
+    </div>
+  </div>
+
+</div>
